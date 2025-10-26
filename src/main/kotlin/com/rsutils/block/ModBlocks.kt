@@ -18,7 +18,7 @@ import java.util.function.Function
 object ModBlocks {
     val CONDENSED_DIRT: Block = register(
         "condensed_dirt",
-        ::Block,
+        ::CondensedDirt,
         AbstractBlock.Settings.create().sounds(BlockSoundGroup.GRASS),
         true
     )
@@ -51,7 +51,7 @@ object ModBlocks {
     }
 
     fun initialize() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.NATURAL).register {
+        ItemGroupEvents.modifyEntriesEvent(RsUtilModServerside.itemGroupKey).register {
             it.add(ModBlocks.CONDENSED_DIRT.asItem())
         }
     }

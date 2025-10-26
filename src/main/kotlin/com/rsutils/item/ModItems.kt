@@ -31,7 +31,7 @@ object ModItems {
     }
 
     fun initialize() {
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS)
+        ItemGroupEvents.modifyEntriesEvent(RsUtilModServerside.itemGroupKey)
             .register { it.add(SUSPICIOUS_SUBSTANCE) }
     }
 }

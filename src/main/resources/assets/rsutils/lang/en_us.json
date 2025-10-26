@@ -1,5 +1,6 @@
 {
   "item.rsutils.suspicious_substance": "Suspicious Substance",
   "itemTooltip.rsutils.suspicious_substance": "This is apparently a tooltip",
-  "block.rsutils.condensed_dirt": "Condensed Dirt"
+  "block.rsutils.condensed_dirt": "Condensed Dirt",
+  "itemGroup.rsutils": "R's Utility Mod"
 }
