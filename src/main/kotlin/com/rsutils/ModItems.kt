@@ -1,5 +1,6 @@
 package com.rsutils
 
+import com.rsutils.item.SuspiciousSubstance
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents
 import net.minecraft.item.Item
 import net.minecraft.item.ItemGroups
@@ -11,7 +12,7 @@ import net.minecraft.util.Identifier
 import java.util.function.Function
 
 object ModItems {
-    val SUSPICIOUS_SUBSTANCE = register("suspicious_substance", ::Item, Item.Settings())
+    val SUSPICIOUS_SUBSTANCE = register("suspicious_substance", ::SuspiciousSubstance, Item.Settings())
 
     fun register(name: String, itemFactory: Function<Item.Settings, Item>, settings: Item.Settings) : Item {
         val itemKey: RegistryKey<Item> = RegistryKey.of(

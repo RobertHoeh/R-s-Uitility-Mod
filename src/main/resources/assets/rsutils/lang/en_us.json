@@ -1,3 +1,4 @@
 {
-  "item.rsutils.suspicious_substance": "Suspicious Substance"
+  "item.rsutils.suspicious_substance": "Suspicious Substance",
+  "itemTooltip.rsutils.suspicious_substance": "This is apparently a tooltip"
 }
