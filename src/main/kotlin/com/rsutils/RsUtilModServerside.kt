@@ -1,5 +1,6 @@
 package com.rsutils
 
+import com.rsutils.block.ModBlocks
 import com.rsutils.item.ModItems
 import net.fabricmc.api.ModInitializer
 import org.slf4j.LoggerFactory
@@ -15,5 +16,6 @@ object RsUtilModServerside : ModInitializer {
 		logger.info("Hello Fabric world From Server")
 
         ModItems.initialize()
+        ModBlocks.initialize()
 	}
 }
