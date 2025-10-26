@@ -1,6 +1,6 @@
-package com.rsutils
+package com.rsutils.item
 
-import com.rsutils.item.SuspiciousSubstance
+import com.rsutils.RsUtilModServerside
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents
 import net.minecraft.item.Item
 import net.minecraft.item.ItemGroups
@@ -32,6 +32,6 @@ object ModItems {
 
     fun initialize() {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS)
-            .register { it.add(ModItems.SUSPICIOUS_SUBSTANCE) }
+            .register { it.add(SUSPICIOUS_SUBSTANCE) }
     }
 }
