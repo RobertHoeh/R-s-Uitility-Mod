@@ -12,6 +12,7 @@ import net.minecraft.block.BlockState
 import net.minecraft.block.Blocks
 import net.minecraft.util.Identifier
 import xyz.nucleoid.packettweaker.PacketContext
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents
 
 class CondensedDirt(settings: Settings) : Block(settings), PolymerTexturedBlock {
     private val blockModel = PolymerBlockModel.of(

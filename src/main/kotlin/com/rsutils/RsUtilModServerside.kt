@@ -1,10 +1,12 @@
 package com.rsutils
 
 import com.rsutils.block.ModBlocks
+import com.rsutils.events.OnTick
 import com.rsutils.item.ModItems
 import eu.pb4.polymer.core.api.item.PolymerItemGroupUtils
 import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils
 import net.fabricmc.api.ModInitializer
+import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents
 import net.minecraft.item.ItemGroup
 import net.minecraft.item.ItemStack
 import net.minecraft.registry.Registries
@@ -37,5 +39,9 @@ object RsUtilModServerside : ModInitializer {
 
         ModItems.initialize()
         ModBlocks.initialize()
+
+        ServerTickEvents.END_SERVER_TICK.register { OnTick.onTick(it) }
 	}
+
+
 }
