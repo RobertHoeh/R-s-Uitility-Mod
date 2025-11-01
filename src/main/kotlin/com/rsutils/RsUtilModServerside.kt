@@ -1,6 +1,7 @@
 package com.rsutils
 
 import com.rsutils.block.ModBlocks
+import com.rsutils.events.ModEvents
 import com.rsutils.events.OnTick
 import com.rsutils.item.ModItems
 import eu.pb4.polymer.core.api.item.PolymerItemGroupUtils
@@ -14,11 +15,12 @@ import net.minecraft.registry.Registry
 import net.minecraft.registry.RegistryKey
 import net.minecraft.text.Text
 import net.minecraft.util.Identifier
+import org.slf4j.Logger
 import org.slf4j.LoggerFactory
 
 object RsUtilModServerside : ModInitializer {
     const val MOD_ID: String = "rsutils"
-    val logger = LoggerFactory.getLogger(MOD_ID)
+    val logger: Logger = LoggerFactory.getLogger(MOD_ID)
 
     val itemGroupKey: RegistryKey<ItemGroup> = RegistryKey<ItemGroup>.of(
         Registries.ITEM_GROUP.key,
@@ -39,9 +41,8 @@ object RsUtilModServerside : ModInitializer {
 
         ModItems.initialize()
         ModBlocks.initialize()
-
-        ServerTickEvents.END_SERVER_TICK.register { OnTick.onTick(it) }
-	}
+        ModEvents.initialize()
+    }
 
 
 }
