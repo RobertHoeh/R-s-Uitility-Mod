@@ -17,7 +17,7 @@ object OnTick {
         for (playerName in playerNames) {
             val player = server.playerManager.getPlayer(playerName)
             if (player?.isPlayer == true) {
-                tellPlayerLocation(player)
+                //tellPlayerLocation(player)
             }
         }
     }
