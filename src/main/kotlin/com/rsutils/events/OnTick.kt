@@ -23,6 +23,6 @@ object OnTick {
     }
 
     fun tellPlayerLocation(player: ServerPlayerEntity) {
-
+        player.sendMessage(Text.of("Your current location is ${player.lastX} ${player.lastY} ${player.lastZ}"))
     }
 }

@@ -1,6 +1,7 @@
 package com.rsutils
 
 import com.rsutils.block.ModBlocks
+import com.rsutils.commands.ModCommands
 import com.rsutils.events.ModEvents
 import com.rsutils.events.OnTick
 import com.rsutils.item.ModItems
@@ -42,6 +43,7 @@ object RsUtilModServerside : ModInitializer {
         ModItems.initialize()
         ModBlocks.initialize()
         ModEvents.initialize()
+        ModCommands.initialize()
     }
 
 
